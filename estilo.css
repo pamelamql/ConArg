@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    background-color: azure;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: rgb(37, 28, 216);
+}
+
+h1 {
+    color: rgb(37, 28, 216);
+}
+
+h2 {
+    color: rgb(37, 28, 216);
+}
+
+.cabecera { /* header > titulo */
+    padding: 1em;
+    text-align: center;
+    background-color: #74acde;
+    height: auto;
+}
+
+    .conarg {   /* Título principal */
+        color: azure;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3em;
+    }
+
+        .titleLink {
+            text-decoration: none;
+        }
+
+.navbar {      /* nav > enlaces */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #74acde;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+    .enlace {   /* enlaces navbar */
+        margin: 1px 1em 1px 1em;
+        padding: 1em;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: azure;
+    }
+
+
+
+main {
+    background-color: azure;
+}
+
+aside {         /* fuentes */
+    padding: 1em;
+    margin: 1em;
+    background-color: azure;
+    color: #444444;
+}  
+    .asideLink {
+        text-decoration: none;
+        color: #444444;
+    }
+
+footer {    /* pie de página */
+    padding: 1.1em;
+    text-align: center;
+    background-color: #74acde;
+    color: azure;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+    .footerLink {
+        text-decoration: none;
+    }
+
+    
+
+            /* index html */
+
+.containermain {    /* contenedor principal > sections */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+    #titulomain {
+        text-align: center;
+        margin-bottom: 4em;
+    }
+
+.section {  /* seccion principal > articles */
+    width: 90%;
+    align-content: center;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+    #puna0 {    /* Puna container */
+        text-align: center;
+        margin-bottom: 5em;
+        
+    }
+
+    
+
+    #puna2 {    /* Puna imagenes  */
+        padding: 4%;
+        height: auto;
+    }
+
+
+    #cataratas0 {   /* Cataratas container */
+        text-align: center;
+        margin-bottom: 5em;
+    }
+
+    #cataratas2 {       /* img container */
+        padding: 4%;
+        height: auto;
+    }
+
+
+    #calafate0 {   /* Calafate container */
+        text-align: center;
+        margin-bottom: 5em;
+    }
+
+    #calafate0 {
+        text-align: center;
+        margin-bottom: 5em;
+    }
+
+    #calafate2 {        /* img container */
+        padding: 4%;
+        height: auto;
+    }
+
+    .seemorebutton {  /* enlace "Ver más" */
+        margin: 2em;
+        text-decoration: none;
+        font-weight: bolder;
+        color: #74acde;
+    }
+
+            /* index html end*/
+
+
+
+        /* Quíenes Somos html */
+
+#quienSomosMain {
+    padding: 1em;
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+
+.quienSomosText {
+    text-align: center;
+}
+
+
+
+.iframeContacto {           /* iFrame container */
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+    text-align: center;
+}
+
+    #iFrameMap {        /* iFrame mapa */
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+
+        /* Quiénes somos end */
+
+            /* Contacto.html */
+.contactoMain {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .infoContacto {             /* Info de Contacto.html */
+        width: 100%;
+        height: auto;
+        padding: 1em;
+        text-align: center;
+    }
+
+        #mailto {
+            text-decoration: none;
+            color: #74acde;
+        }
+                
+
+                /* formulario start */
+
+    .form {             /* contenedor de formulario */
+        width: 25%;
+        height: auto;
+        padding: 0%;
+        margin: 1em;
+        color: rgb(37, 28, 216);
+
+    }
+
+        .genreRadio {           /* Género form */
+            list-style-type: none;
+            
+        }
+
+        .formField {            /* contenedor de los sectores del formulario */
+            padding: 0.3em;
+            margin: 0.2em;
+        }
+
+        .inputField {           /* campo del formulario */
+            margin: 1%;
+        }
+        
+        #formButton {
+            margin-left: 0.5em;
+        }
+        
+            /* formulario end */
+            /* Contacto.html end */
+
+
+
+
+
+.miniImg:hover {            /* transform */
+    transition-delay: 0.3s;
+    transform: scale(2.5);
+}  
+
+
+
+
+@media only screen and (max-width: 767px) { /* breakpoint para celulares */
+    .navbar {           /* nav queda en columna */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .form {
+        margin-left: 0;
+        width: 40%;
+        transform: scaleX(1.2);
+        transform: scaleY(1.1);
+        
+    }
+
+    
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {   /* breakpoint para tablets */
+    
+}

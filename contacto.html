@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="png"> <!-- favicon -->
+
+    <script src="https://kit.fontawesome.com/1e30147166.js"     crossorigin="anonymous"></script> <!-- fontAwesome  -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css"> <!-- estilo -->
+
+
+    <title>Conocé Argentina: Contacto</title>
+</head>
+
+<body>
+    <header class="cabecera">
+
+        <div class="titulo">
+          <a href="index.html" class="titleLink"><h1 class="conarg">Conocé Argentina</h1></a>
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html" class="enlace">Inicio</a>
+        <a href="quienessomos.html" class="enlace">Quiénes somos</a>
+        <a href="contacto.html" class="enlace">Contacto</a>
+    </nav>
+
+    <main class="contactoMain">
+        <h1>Contacto</h1>     <!-- titulo Contacto -->
+      <article class="infoContacto">      <!-- descripción + mapa -->
+        <div>
+          <p>Por consultas o sugerencias podes contactarte a nuestro   
+            <a href="mailto:conoceargturismo@gmail.com?subject=Contacto"  id="mailto">correo electrónico</a>.</p> <!-- mail ficticio -->
+          <p>Dejanos tus datos y suscribite a nuestro Newsletter para que te enviemos alertas, sugerencias y/o consejos de viaje adaptadas a tu perfil y a tus necesidades.</p>
+        </div>
+      </article>
+
+      <article class="form">      <!-- formulario -->
+          <form action="" name="formulario" method="get">
+            
+            <div class="formField">       <!-- nombre form -->
+              <label class="labelField"> Nombre: </label> 
+              <input class="inputField" type="text" name="nombre"  maxlength="20" required>
+            </div>
+            
+            <div class="formField">       <!-- apellido form -->
+              <label class="labelField"> Apellido: </label> 
+              <input class="inputField" type="text" name="apellido"  maxlength="20" required>
+            </div>
+
+            <div class="formField">      <!-- edad form -->
+              <label class="labelField"> Edad: </label>  
+              <input class="inputField" type="number" name="edad" maxlength="2" min="16" max="99">
+            </div>
+          
+          <div class="formField">        <!-- genero form -->
+              <label class="labelField"> Género: </label> 
+                <ul class="genreRadio">
+                  <li><input class="inputField" type="radio" name="genero"  value="Hombre" > Hombre</li>
+                  <li><input class="inputField" type="radio" name="genero"  value="Mujer"> Mujer </li>
+                  <li><input class="inputField" type="radio" name="genero" value="nobin"> No binarie</li>
+              </ul>
+          </div>
+          
+          <div class="formField">       <!-- email form -->
+            <label class="labelField"> E-mail: </label>  
+            <input class="inputField" type="email" name="email"  maxlength="40" required>
+          </div>
+
+        <div>        <!-- botón "enviar" form -->
+              <input id="formButton" type="submit" name="btn" value="Enviar">
+          </div>
+
+          </form>
+    </article>
+
+  
+    </main>
+
+    <footer>
+      <div id="iconsFooter">      <!-- clase por icon -->
+        <a href="https://www.facebook.com" target="_blank" class="footerLink">  
+            <i class="fab fa-facebook" aria-hidden="true" style="color: white;"></i>
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank" class="footerLink"> 
+            <i class="fab fa-instagram" aria-hidden="true" style="color: white;" id="iconFooter2"></i>
+        </a>
+        
+        <a href="https://www.twitter.com" target="_blank" class="footerLink">
+            <i class="fab fa-twitter" aria-hidden="true" style="color: white;" id="iconFooter3"></i>
+        </a>
+        
+    </div>
+
+      <div>
+          &copy;Conocé Argentina 2021
+      </div>
+
+  </footer>
+             
+              <!-- Fin HTML -->
+
+              
+     <script>    /* JavaScript formulario */  
+      (function(){
+        
+        var formulario = document.getElementsByName('formulario')[0],
+            elementos = formulario.elements,
+            boton = document.getElementById('btn');
+    
+        var validarNombre = function(e){    /* Nombre */
+            if (formulario.nombre.value == 0){
+                alert("Completa el campo nombre");
+                e.preventDefault();
+            }
+        };
+    
+        var validarApellido = function(e){    /* Apellido */
+          if (formulario.apellido.value == 0){
+              alert("Completa el campo apellido");
+              e.preventDefault();
+            }
+        }
+    
+        var validarRadio = function(e){       /* Género */
+            if (formulario.genero[0].checked == true || 
+                formulario.genero[1].checked == true ||
+                formulario.genero[2].checked == true) {
+            } else{
+                alert("Selecciona el género");
+                e.preventDefault();
+            }
+        };
+        
+        var validarEdad = function(e){    /* Edad */
+          if (formulario.edad.value == 0){
+              alert("Completa el campo de edad"); 
+              e.preventDefault();
+            }
+            
+        };
+                  /* Acá iría email function pero ya tiene validación en su style inline */
+        
+        var validar = function(e){      /* validación de las funciones */
+            validarNombre(e);
+            validarApellido(e);
+            validarRadio(e);
+            validarEdad(e);
+            
+        };
+        formulario.addEventListener("submit", validar)
+    }())
+    </script> 
+
+</body>
+</html>
